@@ -1,0 +1,60 @@
+﻿@using ForeCastAPIMVC.Models
+
+<script type="text/javascript">
+    function redirectOnClick() {
+        document.location = '/Home/Index';
+    }
+</script>
+<div>
+    <div class="box-wrapper">
+        <div id="box1">
+            <h2>Weather Forecast</h2>
+        </div>
+
+        <div id="box2">
+            <strong>Latitude: </strong>
+            <label id="lblLat">@Model.Lat</label>
+            <strong>Longitude: </strong>
+            <label id="lblLon">@Model.Lon</label>
+        </div>
+
+        <div id="box3">
+            <div id="box4">
+                <h1>
+                    <span id="lblCity">@Model.City</span><br />
+                </h1>
+                <h2><span id="lblCountry">@Model.Country</span></h2>
+
+            </div>
+            <div class="middle-column">
+                <div id="box5" class="center">
+                    <img src="@Url.Content("http://openweathermap.org/img/w/" + @Model.WeatherIcon + ".png")" alt="Image" />
+                    <br />
+                    <label id="lblDescription">@Model.Description </label>
+                </div>
+                <div id="box6">
+                    <strong>Wind Speed </strong><label id="lblWindSpeed">@Model.speed</label> meter/sec<br />
+                    <strong>Wind Direction </strong><label id="lblWindDirection">@Model.deg</label> degree<br />
+                    <strong>Wind Gust </strong><label id="lblWindGust">@Model.gust</label> meter/sec<br />
+
+
+                </div>
+                <div id="box7">
+                    <strong>Humidity:</strong>
+                    <label id="lblHumidity">@Model.Humidity</label>
+                </div>
+            </div>
+            <div id="box8">
+                Temperature (Feels Like)<label id="lblTempFeelsLike">@Model.TempFeelsLike</label><br />
+                Temperature <label id="lblTemp"></label>@Model.Temp<br />
+                Temperature (Min)<label id="lblTempMin">@Model.TempMin</label><br />
+                Temperature (Max)<label id="lblTempMax">@Model.TempMax</label><br />
+
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="vertical-center">
+        <input type='button' value='Back to search' id='myButton' class="button" onClick='redirectOnClick()' />
+        </div>
+    </div>

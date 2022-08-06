@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeCastAPIMVC", "ForeCastAPIMVC\ForeCastAPIMVC.csproj", "{D525581E-4E95-4161-A40A-663AD66A23BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D525581E-4E95-4161-A40A-663AD66A23BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D525581E-4E95-4161-A40A-663AD66A23BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D525581E-4E95-4161-A40A-663AD66A23BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D525581E-4E95-4161-A40A-663AD66A23BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F78DD8A6-60E0-4F6C-934F-B8F65B906202}
+	EndGlobalSection
+EndGlobal

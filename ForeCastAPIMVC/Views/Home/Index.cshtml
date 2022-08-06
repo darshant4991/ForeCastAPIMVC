@@ -1,0 +1,46 @@
+﻿<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#txtCity").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Index",
+                    type: "POST",
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.Name, value: item.Name };
+                        }))
+
+                    }
+                })
+            },
+            minLength : 3,
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    })
+</script>
+
+<center>    
+    @using (Html.BeginForm("DetailsView", "Home", FormMethod.Post))
+    {
+        <h1>Search City and Get Weather Forecast</h1>
+
+        <div>
+            <strong>City Name  :</strong>
+            <input id="txtCity" type="text" tabindex="1" autocomplete="on", name="txtCity"/>
+            <br />
+            <br />
+            <input type="submit" value="Get Weather Forecast" id="btnSubmit" class="button" />
+        </div>
+    }
+    </center>
+
+
+
+
